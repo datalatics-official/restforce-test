@@ -55,7 +55,7 @@ module Restforce
   # Inherit from Faraday::Error::ClientError for backwards-compatibility
   # Consumers of this library that rescue and handle Faraday::Error::ClientError
   # can continue to do so.
-  ResponseError       = Class.new(Faraday::Error::ClientError)
+  ResponseError       = Class.new(Faraday::ClientError)
   MatchesMultipleError= Class.new(ResponseError)
   EntityTooLargeError = Class.new(ResponseError)
 
